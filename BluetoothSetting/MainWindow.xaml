@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BluetoothSetting"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="蓝牙" Height="450" Width="800">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Height" Value="26"/>
             <Setter Property="Padding" Value="10,4"/>
             <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Margin" Value="0 10 0 0"></Setter>
         </Style>
     </Window.Resources>
     <Grid>
-        <StackPanel>
+        <StackPanel VerticalAlignment="Center">
             <Button Content="显示搜索到的蓝牙列表" x:Name="OpenBluetoothSearchListButton" Click="OpenBluetoothSearchListButton_OnClick"></Button>
             <Button Content="控制面板-打开系统蓝牙设置" x:Name="OpenBluetoothSettingButton" Click="OpenBluetoothSettingButton_OnClick"></Button>
             <Button Content="Win10设置Url-打开系统蓝牙设置" x:Name="OpenBluetoothSetting2Button" Click="OpenBluetoothSetting2Button_OnClick"></Button>

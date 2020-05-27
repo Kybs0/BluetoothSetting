@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -44,6 +46,12 @@ namespace BluetoothSetting
         {
             try
             {
+                if (!NetworkInterfaceHelper.HasBluetoothNetwork())
+                {
+                    MessageBox.Show(this, "未检测到蓝牙网络适配器");
+                    return;
+                }
+                //var cplPath = @"C:\Windows\System32\bthprops.cpl";
                 //打开蓝牙设置
                 var process = new Process { StartInfo = { FileName = "control", Arguments = "bthprops.cpl" } };
                 process.Start();
